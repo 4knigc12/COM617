@@ -1,0 +1,83 @@
+---
+# ===========================================
+# Name: Play book to deploy BMP Playground
+# Author: Ian Thornton
+# ===========================================
+
+- hosts: bmp-playground
+  gather_facts: no
+  collections:
+    - community.docker
+  tasks:
+
+  - name: Add an Docker signing key, uses whichever key is at the URL
+    ansible.builtin.apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      #keyring: /usr/share/keyrings/docker-archive-keyring.gpg
+      state: present
+
+  - name: Add Docker repository
+    apt_repository:
+      repo: deb https://download.docker.com/linux/ubuntu focal stable
+      state: present
+
+  - name: Update and upgrade apt packages
+    become: true
+    apt:
+      upgrade: yes
+      update_cache: yes
+
+  - name: Install apt packages
+    apt:
+      pkg:
+      - python3.8
+      - python3-pip
+      - git
+      - docker-ce 
+      - docker-ce-cli
+      - containerd.io
+
+  - name: Enable Docker service
+    ansible.builtin.service:
+      name: docker
+      state: started
+      enabled: yes
+
+  - name: Create {{ bmp_playground_install_path }} directory
+    file:
+      path: '{{ bmp_playground_install_path }}'
+      state: directory
+
+  - name: Install docker-compose
+    pip:
+      name: 
+      - docker-compose
+
+  - name: Clone BMP Playground GIT repo
+    git:
+      repo: "https://github.com/opennms-forge/bmp-playground.git"
+      dest: "{{ bmp_playground_install_path }}"
+      force: yes
+
+  - name: Ensure existing environment is removed
+    community.docker.docker_compose:
+      project_src: "{{ bmp_playground_install_path }}"
+      state: absent
+
+  - name: Run `docker-compose up`
+    community.docker.docker_compose:
+      project_src: "{{ bmp_playground_install_path }}"
+      files:
+        - "{{ bmp_playground_install_path }}docker-compose.yml"
+      build: yes
+    register: docker_compose_output
+
+  - name: Check that the service http://localhost:{{ opennms_port }}/opennms/index.jsp is up (status 200) wait for up to 900 seconds
+    uri:
+      url: "http://localhost:{{ opennms_port }}/opennms/index.jsp"
+    register: _result
+    until: _result.status == 200 
+    retries: 30
+    delay: 30
+
+  - include_tasks: provision-opennms.yml

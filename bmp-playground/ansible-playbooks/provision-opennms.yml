@@ -1,0 +1,57 @@
+---
+# ===========================================
+# Name: Play book to configure OpenNMS
+# Author: Ian Thornton
+# ===========================================
+
+- name: Provision OpenNMS - Create Foreign Sources
+  uri:
+    url: "http://localhost:{{ opennms_port }}/opennms/rest/foreignSources"
+    user: "{{ opennms_username }}"
+    password: "{{ opennms_password }}"
+    method: POST
+    headers:
+      Content-Type: "application/xml"
+      Accept: "application/xml"
+    body: "{{lookup('template','{{ bmp_playground_install_path }}/setup/foreign-source.xml')}}"
+    status_code: 202
+
+- name: Provision OpenNMS - Create Requisition OpenNMS Stack
+  uri:
+    url: "http://localhost:{{ opennms_port }}/opennms/rest/requisitions"
+    user: "{{ opennms_username }}"
+    password: "{{ opennms_password }}"
+    method: POST
+    headers: 
+      Content-Type: "application/xml"
+      Accept: "application/xml"
+    body: "{{lookup('template','{{ bmp_playground_install_path }}/setup/opennms-stack.xml')}}"
+    status_code: 202
+
+- name: Provision OpenNMS - Create Requisition BGP Router
+  uri:
+    url: "http://localhost:{{ opennms_port }}/opennms/rest/requisitions"
+    user: "{{ opennms_username }}"
+    password: "{{ opennms_password }}"
+    method: POST
+    headers: 
+      Content-Type: "application/xml"
+      Accept: "application/xml"
+    body: "{{lookup('template','{{ bmp_playground_install_path }}/setup/bgp-routers.xml')}}"
+    status_code: 202
+
+- name: Provision OpenNMS - Import requisition for OpenNMS Stack
+  uri:
+    url: "http://localhost:{{ opennms_port }}/opennms/rest/requisitions/opennms-stack/import"
+    user: "{{ opennms_username }}"
+    password: "{{ opennms_password }}"
+    method: PUT
+    status_code: 202
+
+- name: Provision OpenNMS - Import requisition for BGP Router
+  uri:
+    url: "http://localhost:{{ opennms_port }}/opennms/rest/requisitions/bgp-routers/import"
+    user: "{{ opennms_username }}"
+    password: "{{ opennms_password }}"
+    method: PUT
+    status_code: 202
