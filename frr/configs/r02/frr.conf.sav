@@ -1,0 +1,5 @@
+frr version 8.1_git
+frr defaults traditional
+hostname frr-r02
+no ipv6 forwarding
+!

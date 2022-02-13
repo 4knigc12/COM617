@@ -1,8 +1,4 @@
 ---
-# ===========================================
-# Name: Play book to configure OpenNMS
-# Author: Ian Thornton
-# ===========================================
 
 - name: Provision OpenNMS - Create Foreign Sources
   uri:
@@ -13,7 +9,7 @@
     headers:
       Content-Type: "application/xml"
       Accept: "application/xml"
-    body: "{{lookup('template','{{ bmp_playground_install_path }}/setup/foreign-source.xml')}}"
+    body: "{{lookup('template','templates/foreign-source.xml')}}"
     status_code: 202
 
 - name: Provision OpenNMS - Create Requisition OpenNMS Stack
@@ -25,7 +21,7 @@
     headers: 
       Content-Type: "application/xml"
       Accept: "application/xml"
-    body: "{{lookup('template','{{ bmp_playground_install_path }}/setup/opennms-stack.xml')}}"
+    body: "{{lookup('template','templates/opennms-stack.xml')}}"
     status_code: 202
 
 - name: Provision OpenNMS - Create Requisition BGP Router
@@ -37,7 +33,7 @@
     headers: 
       Content-Type: "application/xml"
       Accept: "application/xml"
-    body: "{{lookup('template','{{ bmp_playground_install_path }}/setup/bgp-routers.xml')}}"
+    body: "{{lookup('template','templates/bgp-routers.xml')}}"
     status_code: 202
 
 - name: Provision OpenNMS - Import requisition for OpenNMS Stack

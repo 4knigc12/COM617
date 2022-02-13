@@ -1,0 +1,68 @@
+version: '3'
+
+networks:
+# BGP Routing network for location Default
+  net-frr-r01:
+    ipam:
+      config:
+        - subnet: 192.168.155.0/24
+  net-frr-r02:
+    ipam:
+      config:
+        - subnet: 192.168.156.0/24
+  net-frr-peer:
+    ipam:
+      config:
+        - subnet: 10.0.155.0/24
+  net-frr-mgmt:
+    ipam:
+      config:
+        - subnet: 192.168.20.0/24
+volumes:
+  data-postgres: {}
+  data-opennms: {}
+
+services:
+  frr-r01:
+    image: frrouting/frr:latest
+    container_name: frr-r01
+    hostname: frr-r01
+    volumes:
+      - ./configs/r01/:/etc/frr/
+      # - ./configs/r01/daemons:/etc/frr/daemons
+      # - ./configs/r01/bgpd.conf:/etc/frr/bgpd.conf
+      # - ./configs/r01/ospfd.conf:/etc/frr/ospfd.conf
+      # - ./configs/r01/staticd.conf:/etc/frr/staticd.conf
+      # - ./configs/r01/zebra.conf:/etc/frr/zebra.conf
+    networks:
+      net-frr-r01:
+        ipv4_address: 192.168.155.150
+      net-frr-peer:
+        ipv4_address: 10.0.155.150
+      net-frr-mgmt:
+        ipv4_address: 192.168.20.150
+    cap_add:
+      - cap_sys_admin
+      - cap_net_admin
+
+  frr-r02:
+    image: frrouting/frr:latest
+    container_name: frr-r02
+    hostname: frr-r02
+    volumes:
+      - ./configs/r02/:/etc/frr/
+      # - ./configs/r02/daemons:/etc/frr/daemons
+      # - ./configs/r02/bgpd.conf:/etc/frr/bgpd.conf
+      # - ./configs/r02/ospfd.conf:/etc/frr/ospfd.conf
+      # - ./configs/r02/staticd.conf:/etc/frr/staticd.conf
+      # - ./configs/r02/zebra.conf:/etc/frr/zebra.conf
+    networks:
+      net-frr-r02:
+        ipv4_address: 192.168.156.151
+      net-frr-peer:
+        ipv4_address: 10.0.155.151
+      net-frr-mgmt:
+        ipv4_address: 192.168.20.151
+    cap_add:
+      - cap_sys_admin
+      - cap_net_admin
