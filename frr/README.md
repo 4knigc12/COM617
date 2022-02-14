@@ -1,3 +1,7 @@
 # FRRouting
 
-    sudo docker exec -it frr-r01 vtysh
+    sudo docker exec -u frr -it frr-r01 vtysh
+
+## Topology
+
+![BGP Network Topology](BGP-Network-Topology.png)
