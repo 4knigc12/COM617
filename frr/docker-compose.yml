@@ -14,61 +14,91 @@ networks:
     ipam:
       config:
         - subnet: 10.0.155.0/24
-  net-frr-mgmt:
+  net-mgmt:
     ipam:
       config:
-        - subnet: 192.168.20.0/24
+        - subnet: 192.168.10.0/24
 volumes:
   data-postgres: {}
   data-opennms: {}
 
 services:
+  horizon:
+    image: opennms/horizon:29.0.6
+    container_name: horizon
+    environment:
+      - TZ=Europe/London
+      - POSTGRES_HOST=database
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - OPENNMS_DBNAME=opennms
+      - OPENNMS_DBUSER=opennms
+      - OPENNMS_DBPASS=opennms
+      - JAVA_OPTS=-Xmx4096m -XX:MaxMetaspaceSize=2048m
+    networks:
+      net-mgmt:
+        ipv4_address: 192.168.10.4
+    volumes:
+      - ./horizon-overlay:/opt/opennms-overlay
+    command: ["-s"]
+    ports:
+      - "8980:8980"
+      - "8101:8101"
+      - "61616:61616/tcp"
+      - "11019:11019/tcp"
+
+  database:
+    image: postgres:12
+    container_name: database
+    environment:
+      - TZ=Europe/London
+      - POSTGRES_HOST=database
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - data-postgres:/var/lib/postgresql/data:delegated
+    networks:
+      net-mgmt:
+        ipv4_address: 192.168.10.3
+
   frr-r01:
     image: frrouting/frr:latest
-    deploy:
-      restart_policy:
-        condition: on-failure
     container_name: frr-r01
     hostname: frr-r01
     volumes:
-      - ./configs/r01/:/etc/frr/
-      # - ./configs/r01/daemons:/etc/frr/daemons
-      # - ./configs/r01/bgpd.conf:/etc/frr/bgpd.conf
-      # - ./configs/r01/ospfd.conf:/etc/frr/ospfd.conf
-      # - ./configs/r01/staticd.conf:/etc/frr/staticd.conf
-      # - ./configs/r01/zebra.conf:/etc/frr/zebra.conf
+      #- ./configs/r01/:/etc/frr/
+      - ./configs/r01/daemons:/etc/frr/daemons
+      - ./configs/r01/frr.conf:/etc/frr/frr.conf
+      - ./configs/r01/frr.conf.sav:/etc/frr/frr.conf.sav
     networks:
       net-frr-r01:
         ipv4_address: 192.168.155.150
       net-frr-peer:
         ipv4_address: 10.0.155.150
-      net-frr-mgmt:
-        ipv4_address: 192.168.20.150
+      net-mgmt:
+        ipv4_address: 192.168.10.101
     cap_add:
       - cap_sys_admin
       - cap_net_admin
 
   frr-r02:
     image: frrouting/frr:latest
-    deploy:
-      restart_policy:
-        condition: on-failure
     container_name: frr-r02
     hostname: frr-r02
     volumes:
-      - ./configs/r02/:/etc/frr/
-      # - ./configs/r02/daemons:/etc/frr/daemons
-      # - ./configs/r02/bgpd.conf:/etc/frr/bgpd.conf
-      # - ./configs/r02/ospfd.conf:/etc/frr/ospfd.conf
-      # - ./configs/r02/staticd.conf:/etc/frr/staticd.conf
-      # - ./configs/r02/zebra.conf:/etc/frr/zebra.conf
+      # - ./configs/r02/:/etc/frr/
+      - ./configs/r02/daemons:/etc/frr/daemons
+      - ./configs/r02/frr.conf:/etc/frr/frr.conf
+      - ./configs/r02/frr.conf.sav:/etc/frr/frr.conf.sav
     networks:
       net-frr-r02:
         ipv4_address: 192.168.156.151
       net-frr-peer:
         ipv4_address: 10.0.155.151
-      net-frr-mgmt:
-        ipv4_address: 192.168.20.151
+      net-mgmt:
+        ipv4_address: 192.168.10.102
     cap_add:
       - cap_sys_admin
       - cap_net_admin
