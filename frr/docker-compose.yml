@@ -47,6 +47,7 @@ services:
       - "8101:8101"
       - "61616:61616/tcp"
       - "11019:11019/tcp"
+    restart: unless-stopped
 
   database:
     image: postgres:12
@@ -62,6 +63,7 @@ services:
     networks:
       net-mgmt:
         ipv4_address: 192.168.10.3
+    restart: unless-stopped
 
   frr-r01:
     image: frrouting/frr:latest
@@ -82,6 +84,7 @@ services:
     cap_add:
       - cap_sys_admin
       - cap_net_admin
+    restart: unless-stopped
 
   frr-r02:
     image: frrouting/frr:latest
@@ -102,3 +105,25 @@ services:
     cap_add:
       - cap_sys_admin
       - cap_net_admin
+    restart: unless-stopped
+
+# For troubleshoting
+
+  wireshark:
+    image: linuxserver/wireshark
+    container_name: wireshark
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    ports:
+      - 3000:3000 #optional
+    networks:
+      net-frr-r02:
+      net-mgmt:
+        ipv4_address: 192.168.10.5
+    volumes:
+      - /path/to/config:/config
+    restart: unless-stopped
