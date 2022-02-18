@@ -101,7 +101,7 @@ services:
       net-frr-peer:
         ipv4_address: 10.0.155.151
       net-mgmt:
-        ipv4_address: 192.168.10.102
+        ipv4_address: 192.168.10.103
     cap_add:
       - cap_sys_admin
       - cap_net_admin
