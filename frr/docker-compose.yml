@@ -70,10 +70,10 @@ services:
     container_name: frr-r01
     hostname: frr-r01
     volumes:
-      #- ./configs/r01/:/etc/frr/
-      - ./configs/r01/daemons:/etc/frr/daemons
-      - ./configs/r01/frr.conf:/etc/frr/frr.conf
-      - ./configs/r01/frr.conf.sav:/etc/frr/frr.conf.sav
+      - ./configs/r01/:/etc/frr/
+      # - ./configs/r01/daemons:/etc/frr/daemons
+      # - ./configs/r01/frr.conf:/etc/frr/frr.conf
+      # - ./configs/r01/frr.conf.sav:/etc/frr/frr.conf.sav
     networks:
       net-frr-r01:
         ipv4_address: 192.168.155.150
@@ -91,10 +91,10 @@ services:
     container_name: frr-r02
     hostname: frr-r02
     volumes:
-      # - ./configs/r02/:/etc/frr/
-      - ./configs/r02/daemons:/etc/frr/daemons
-      - ./configs/r02/frr.conf:/etc/frr/frr.conf
-      - ./configs/r02/frr.conf.sav:/etc/frr/frr.conf.sav
+      - ./configs/r02/:/etc/frr/
+      # - ./configs/r02/daemons:/etc/frr/daemons
+      # - ./configs/r02/frr.conf:/etc/frr/frr.conf
+      # - ./configs/r02/frr.conf.sav:/etc/frr/frr.conf.sav
     networks:
       net-frr-r02:
         ipv4_address: 192.168.156.151
