@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model-import date-stamp="2022-03-03T16:51:00.968Z" foreign-source="lab-routers" last-import="2022-03-03T16:51:01.031Z">
+    <node foreign-id="R1" node-label="R1">
+        <interface ip-addr="10.0.0.251" status="1" snmp-primary="P"/>
+        <asset name="username" value="admin"/>
+        <asset name="password" value="COM617Team12"/>
+        <asset name="enable" value="COM617Team12"/>
+        <asset name="connection" value="SSH"/>
+        <asset name="autoenable" value="A"/>
+    </node>
+    <node foreign-id="R2" node-label="R2">
+        <interface ip-addr="10.0.0.252" status="1" snmp-primary="P"/>
+        <asset name="username" value="admin"/>
+        <asset name="password" value="COM617Team12"/>
+        <asset name="enable" value="COM617Team12"/>
+        <asset name="connection" value="SSH"/>
+        <asset name="autoenable" value="A"/>
+    </node>
+    <node foreign-id="R3" node-label="R3">
+        <interface ip-addr="10.0.0.253" status="1" snmp-primary="P"/>
+        <asset name="username" value="admin"/>
+        <asset name="password" value="COM617Team12"/>
+        <asset name="enable" value="COM617Team12"/>
+        <asset name="connection" value="SSH"/>
+        <asset name="autoenable" value="A"/>
+    </node>
+    <node foreign-id="R4" node-label="R4">
+        <interface ip-addr="10.0.0.254" status="1" snmp-primary="P"/>
+        <asset name="username" value="admin"/>
+        <asset name="password" value="COM617Team12"/>
+        <asset name="enable" value="COM617Team12"/>
+        <asset name="connection" value="SSH"/>
+        <asset name="autoenable" value="A"/>
+    </node>
+    <node foreign-id="SW-1" node-label="SW-1">
+        <interface ip-addr="10.0.0.11" status="1" snmp-primary="N"/>
+    <node foreign-id="SW-2" node-label="SW-2">
+        <interface ip-addr="10.0.0.12" status="1" snmp-primary="N"/>
+    </node>
+    </model-import>
