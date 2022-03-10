@@ -36,6 +36,8 @@ services:
       - OPENNMS_DBUSER=opennms
       - OPENNMS_DBPASS=opennms
       - JAVA_OPTS=-Xmx4096m -XX:MaxMetaspaceSize=2048m
+      - OPENNMS_TRAPD_ADDRESS=*
+      - OPENNMS_TRAPD_PORT=1162
     networks:
       net-mgmt:
         ipv4_address: 192.168.10.4
@@ -45,6 +47,7 @@ services:
     ports:
       - "8980:8980"
       - "8101:8101"
+      - "162:1162/udp"
       - "61616:61616/tcp"
       - "11019:11019/tcp"
     restart: unless-stopped
