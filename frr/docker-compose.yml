@@ -101,11 +101,11 @@ services:
       - ./configs/r01/frr.conf:/etc/frr/frr.conf.sav
     networks:
       net-frr-r01:
-        ipv4_address: 10.225.0.1
+        ipv4_address: 10.225.0.2
       net-frr-r01-r02:
-        ipv4_address: 10.0.255.1
+        ipv4_address: 10.0.255.2
       net-frr-r01-r03:
-        ipv4_address: 10.0.255.5
+        ipv4_address: 10.0.255.6
       net-mgmt:
         ipv4_address: 192.168.10.101
     cap_add:
