@@ -14,7 +14,7 @@ networks:
     ipam:
       config:
         - subnet: 10.227.0.0/24  
-  net-frr-r4:
+  net-frr-r04:
     ipam:
       config:
         - subnet: 10.228.0.0/24
