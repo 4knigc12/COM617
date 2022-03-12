@@ -123,13 +123,13 @@ services:
       - ./configs/r02/frr.conf:/etc/frr/frr.conf.sav
     networks:
       net-frr-r02:
-        ipv4_address: 10.226.0.1
+        ipv4_address: 10.226.0.2
       net-frr-r01-r02:
-        ipv4_address: 10.0.255.2
+        ipv4_address: 10.0.255.3
       net-frr-r02-r03:
-        ipv4_address: 10.0.253.1
+        ipv4_address: 10.0.253.2
       net-frr-r02-r04:
-        ipv4_address: 10.0.254.2
+        ipv4_address: 10.0.254.3
       net-mgmt:
         ipv4_address: 192.168.10.102
     cap_add:
@@ -147,13 +147,13 @@ services:
       - ./configs/r03/frr.conf:/etc/frr/frr.conf.sav
     networks:
       net-frr-r03:
-        ipv4_address: 10.227.0.1
+        ipv4_address: 10.227.0.2
       net-frr-r01-r03:
-        ipv4_address: 10.0.255.6
+        ipv4_address: 10.0.255.11
       net-frr-r02-r03:
-        ipv4_address: 10.0.253.2
+        ipv4_address: 10.0.253.3
       net-frr-r03-r04:
-        ipv4_address: 10.0.254.5
+        ipv4_address: 10.0.254.10
       net-mgmt:
         ipv4_address: 192.168.10.103
     cap_add:
@@ -171,11 +171,11 @@ services:
       - ./configs/r04/frr.conf:/etc/frr/frr.conf.sav
     networks:
       net-frr-r04:
-        ipv4_address: 10.228.0.1
+        ipv4_address: 10.228.0.2
       net-frr-r02-r04:
-        ipv4_address: 10.0.254.1
+        ipv4_address: 10.0.254.2
       net-frr-r03-r04:
-        ipv4_address: 10.0.254.6
+        ipv4_address: 10.0.254.11
       net-mgmt:
         ipv4_address: 192.168.10.104
     cap_add:
