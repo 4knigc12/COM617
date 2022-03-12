@@ -5,15 +5,41 @@ networks:
   net-frr-r01:
     ipam:
       config:
-        - subnet: 192.168.155.0/24
+        - subnet: 10.225.0.0/24
   net-frr-r02:
     ipam:
       config:
-        - subnet: 192.168.156.0/24
-  net-frr-peer:
+        - subnet: 10.226.0.0/24
+  net-frr-r03:
     ipam:
       config:
-        - subnet: 10.0.155.0/24
+        - subnet: 10.227.0.0/24  
+  net-frr-r4:
+    ipam:
+      config:
+        - subnet: 10.228.0.0/24
+# Inter connect netwotk
+  net-frr-r1-r2:
+    ipam:
+      config:
+        - subnet: 10.0.255.0/30
+  net-frr-r1-r3:
+    ipam:
+      config:
+        - subnet: 10.0.255.4/30
+  net-frr-r2-r3:
+    ipam:
+      config:
+        - subnet: 10.0.253.0/30
+  net-frr-r2-r4:
+    ipam:
+      config:
+        - subnet: 10.0.254.0/30
+  net-frr-r3-r4:
+    ipam:
+      config:
+        - subnet: 10.0.254.4/30
+# Mgmt network
   net-mgmt:
     ipam:
       config:
@@ -36,8 +62,6 @@ services:
       - OPENNMS_DBUSER=opennms
       - OPENNMS_DBPASS=opennms
       - JAVA_OPTS=-Xmx4096m -XX:MaxMetaspaceSize=2048m
-      - OPENNMS_TRAPD_ADDRESS=*
-      - OPENNMS_TRAPD_PORT=1162
     networks:
       net-mgmt:
         ipv4_address: 192.168.10.4
@@ -47,7 +71,6 @@ services:
     ports:
       - "8980:8980"
       - "8101:8101"
-      - "162:1162/udp"
       - "61616:61616/tcp"
       - "11019:11019/tcp"
     restart: unless-stopped
@@ -69,14 +92,13 @@ services:
     restart: unless-stopped
 
   frr-r01:
-    image: frrouting/frr:v8.1.0
+    image: frrouting/frr:latest
     container_name: frr-r01
     hostname: frr-r01
     volumes:
-      - ./configs/r01/:/etc/frr/
-      # - ./configs/r01/daemons:/etc/frr/daemons
-      # - ./configs/r01/frr.conf:/etc/frr/frr.conf
-      # - ./configs/r01/frr.conf.sav:/etc/frr/frr.conf.sav
+      - ./r01-daemons:/etc/frr/r01-daemons
+      - ./r01-frr.conf:/etc/frr/r01-frr.conf
+      - ./r01-frr.conf.sav:/etc/frr/r01-frr.conf.sav
     networks:
       net-frr-r01:
         ipv4_address: 192.168.155.150
@@ -90,14 +112,13 @@ services:
     restart: unless-stopped
 
   frr-r02:
-    image: frrouting/frr:v8.1.0
+    image: frrouting/frr:latest
     container_name: frr-r02
     hostname: frr-r02
     volumes:
-      - ./configs/r02/:/etc/frr/
-      # - ./configs/r02/daemons:/etc/frr/daemons
-      # - ./configs/r02/frr.conf:/etc/frr/frr.conf
-      # - ./configs/r02/frr.conf.sav:/etc/frr/frr.conf.sav
+      - ./r02-daemons/:/etc/frr/r02-daemons
+      - ./r02-frr.conf:/etc/frr/r02-frr.conf
+      - ./r02-frr.conf.sav:/etc/frr/r02-frr.conf.sav
     networks:
       net-frr-r02:
         ipv4_address: 192.168.156.151
@@ -113,7 +134,7 @@ services:
 # For troubleshoting
 
   wireshark:
-    image: linuxserver/wireshark:3.4.9
+    image: linuxserver/wireshark
     container_name: wireshark
     cap_add:
       - NET_ADMIN
