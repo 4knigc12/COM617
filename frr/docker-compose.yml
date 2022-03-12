@@ -96,14 +96,16 @@ services:
     container_name: frr-r01
     hostname: frr-r01
     volumes:
-      - ./r01-daemons:/etc/frr/r01-daemons
-      - ./r01-frr.conf:/etc/frr/r01-frr.conf
-      - ./r01-frr.conf.sav:/etc/frr/r01-frr.conf.sav
+      - ./configs/r01/daemons:/etc/frr/daemons
+      - ./configs/r01/frr.conf:/etc/frr/frr.conf
+      - ./configs/r01/frr.conf:/etc/frr/frr.conf.sav
     networks:
       net-frr-r01:
-        ipv4_address: 192.168.155.150
-      net-frr-peer:
-        ipv4_address: 10.0.155.150
+        ipv4_address: 10.225.0.1
+      net-frr-r01-r02:
+        ipv4_address: 10.0.255.1
+      net-frr-r01-r03:
+        ipv4_address: 10.0.255.5
       net-mgmt:
         ipv4_address: 192.168.10.101
     cap_add:
@@ -116,16 +118,66 @@ services:
     container_name: frr-r02
     hostname: frr-r02
     volumes:
-      - ./r02-daemons/:/etc/frr/r02-daemons
-      - ./r02-frr.conf:/etc/frr/r02-frr.conf
-      - ./r02-frr.conf.sav:/etc/frr/r02-frr.conf.sav
+      - ./configs/r02/daemons:/etc/frr/daemons
+      - ./configs/r02/frr.conf:/etc/frr/frr.conf
+      - ./configs/r02/frr.conf:/etc/frr/frr.conf.sav
     networks:
       net-frr-r02:
-        ipv4_address: 192.168.156.151
-      net-frr-peer:
-        ipv4_address: 10.0.155.151
+        ipv4_address: 10.226.0.1
+      net-frr-r01-r02:
+        ipv4_address: 10.0.255.2
+      net-frr-r02-r03:
+        ipv4_address: 10.0.253.1
+      net-frr-r02-r04:
+        ipv4_address: 10.0.254.2
+      net-mgmt:
+        ipv4_address: 192.168.10.102
+    cap_add:
+      - cap_sys_admin
+      - cap_net_admin
+    restart: unless-stopped
+
+  frr-r03:
+    image: frrouting/frr:latest
+    container_name: frr-r03
+    hostname: frr-r03
+    volumes:
+      - ./configs/r03/daemons:/etc/frr/daemons
+      - ./configs/r03/frr.conf:/etc/frr/frr.conf
+      - ./configs/r03/frr.conf:/etc/frr/frr.conf.sav
+    networks:
+      net-frr-r03:
+        ipv4_address: 10.227.0.1
+      net-frr-r01-r03:
+        ipv4_address: 10.0.255.6
+      net-frr-r02-r03:
+        ipv4_address: 10.0.253.2
+      net-frr-r03-r04:
+        ipv4_address: 10.0.254.5
       net-mgmt:
         ipv4_address: 192.168.10.103
+    cap_add:
+      - cap_sys_admin
+      - cap_net_admin
+    restart: unless-stopped
+
+  frr-r04:
+    image: frrouting/frr:latest
+    container_name: frr-r04
+    hostname: frr-r04
+    volumes:
+      - ./configs/r04/daemons:/etc/frr/daemons
+      - ./configs/r04/frr.conf:/etc/frr/frr.conf
+      - ./configs/r04/frr.conf:/etc/frr/frr.conf.sav
+    networks:
+      net-frr-r04:
+        ipv4_address: 10.228.0.1
+      net-frr-r02-r04:
+        ipv4_address: 10.0.254.1
+      net-frr-r03-r04:
+        ipv4_address: 10.0.254.6
+      net-mgmt:
+        ipv4_address: 192.168.10.104
     cap_add:
       - cap_sys_admin
       - cap_net_admin
