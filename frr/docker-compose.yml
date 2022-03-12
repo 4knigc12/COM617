@@ -19,23 +19,23 @@ networks:
       config:
         - subnet: 10.228.0.0/24
 # Inter connect netwotk
-  net-frr-r1-r2:
+  net-frr-r01-r02:
     ipam:
       config:
         - subnet: 10.0.255.0/30
-  net-frr-r1-r3:
+  net-frr-r01-r03:
     ipam:
       config:
         - subnet: 10.0.255.4/30
-  net-frr-r2-r3:
+  net-frr-r02-r03:
     ipam:
       config:
         - subnet: 10.0.253.0/30
-  net-frr-r2-r4:
+  net-frr-r02-r04:
     ipam:
       config:
         - subnet: 10.0.254.0/30
-  net-frr-r3-r4:
+  net-frr-r03-r04:
     ipam:
       config:
         - subnet: 10.0.254.4/30
