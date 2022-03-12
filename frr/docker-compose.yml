@@ -22,23 +22,23 @@ networks:
   net-frr-r01-r02:
     ipam:
       config:
-        - subnet: 10.0.255.0/30
+        - subnet: 10.0.255.0/29
   net-frr-r01-r03:
     ipam:
       config:
-        - subnet: 10.0.255.4/30
+        - subnet: 10.0.255.8/29
   net-frr-r02-r03:
     ipam:
       config:
-        - subnet: 10.0.253.0/30
+        - subnet: 10.0.253.0/29
   net-frr-r02-r04:
     ipam:
       config:
-        - subnet: 10.0.254.0/30
+        - subnet: 10.0.254.0/29
   net-frr-r03-r04:
     ipam:
       config:
-        - subnet: 10.0.254.4/30
+        - subnet: 10.0.254.8/29
 # Mgmt network
   net-mgmt:
     ipam:
@@ -105,7 +105,7 @@ services:
       net-frr-r01-r02:
         ipv4_address: 10.0.255.2
       net-frr-r01-r03:
-        ipv4_address: 10.0.255.6
+        ipv4_address: 10.0.255.10
       net-mgmt:
         ipv4_address: 192.168.10.101
     cap_add:
