@@ -61,6 +61,8 @@ services:
       - OPENNMS_DBNAME=opennms
       - OPENNMS_DBUSER=opennms
       - OPENNMS_DBPASS=opennms
+      - OPENNMS_TRAPD_ADDRESS=*
+      - OPENNMS_TRAPD_PORT=1162
       - JAVA_OPTS=-Xmx4096m -XX:MaxMetaspaceSize=2048m
     networks:
       net-mgmt:
@@ -69,6 +71,7 @@ services:
       - ./horizon-overlay:/opt/opennms-overlay
     command: ["-s"]
     ports:
+      - "162:1162/udp"
       - "8980:8980"
       - "8101:8101"
       - "5001:5001"
