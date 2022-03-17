@@ -156,8 +156,8 @@
     </queue>
 
     <!-- BMP listener & adapters -->
-    <listener name="BMP-TCP-5001" class-name="org.opennms.netmgt.telemetry.listeners.TcpListener" enabled="true">
-        <parameter key="port" value="5001"/>
+    <listener name="BMP-TCP-5000" class-name="org.opennms.netmgt.telemetry.listeners.TcpListener" enabled="true">
+        <parameter key="port" value="5000"/>
 
         <parser name="BMP-TCP-Parser" class-name="org.opennms.netmgt.telemetry.protocols.bmp.parser.BmpParser" queue="BMP" />
     </listener>
