@@ -9,7 +9,6 @@ Create a tutorial showing how OpenNMS can be configured to monitor BGP in a simu
 - Using software and bare metal routing to configure a BGP network.​
  -Provide repeatable and version-controlled configurations accessible within a shared GitHub repository.​.
 
-**Why it will be helpful**
 
 ## 
 
