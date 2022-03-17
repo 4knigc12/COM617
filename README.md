@@ -15,6 +15,12 @@
 To learn more about OpenNMS Horizon [go to the complete documentation](https://docs.opennms.com/start-page/1.0.0/index.html)
 
 ## Community
+### Contribution, Discussion and Support
+
+You can reach the OpenNMS community and developers via the following channels:
+
+- Q & A [Github Discussions](https://github.com/OpenNMS)
+-
 
 
 
