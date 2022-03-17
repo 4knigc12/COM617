@@ -22,23 +22,23 @@ networks:
   net-frr-r01-r02:
     ipam:
       config:
-        - subnet: 10.0.255.0/29
+        - subnet: 10.0.101.0/29
   net-frr-r01-r03:
     ipam:
       config:
-        - subnet: 10.0.255.8/29
+        - subnet: 10.0.102.0/29
   net-frr-r02-r03:
     ipam:
       config:
-        - subnet: 10.0.253.0/29
+        - subnet: 10.0.103.0/29
   net-frr-r02-r04:
     ipam:
       config:
-        - subnet: 10.0.254.0/29
+        - subnet: 10.0.104.0/29
   net-frr-r03-r04:
     ipam:
       config:
-        - subnet: 10.0.254.8/29
+        - subnet: 10.0.105.0/29
 # Mgmt network
   net-mgmt:
     ipam:
@@ -103,11 +103,11 @@ services:
       net-frr-r01:
         ipv4_address: 10.225.0.2
       net-frr-r01-r02:
-        ipv4_address: 10.0.255.2
+        ipv4_address: 10.0.101.2
       net-frr-r01-r03:
-        ipv4_address: 10.0.255.10
+        ipv4_address: 10.0.102.2
       net-mgmt:
-        ipv4_address: 192.168.10.101
+        ipv4_address: 192.168.10.201
     cap_add:
       - cap_sys_admin
       - cap_net_admin
@@ -125,13 +125,11 @@ services:
       net-frr-r02:
         ipv4_address: 10.226.0.2
       net-frr-r01-r02:
-        ipv4_address: 10.0.255.3
+        ipv4_address: 10.0.101.3
       net-frr-r02-r03:
-        ipv4_address: 10.0.253.2
+        ipv4_address: 10.0.103.2
       net-frr-r02-r04:
-        ipv4_address: 10.0.254.3
-      net-mgmt:
-        ipv4_address: 192.168.10.102
+        ipv4_address: 10.0.104.2
     cap_add:
       - cap_sys_admin
       - cap_net_admin
@@ -149,13 +147,11 @@ services:
       net-frr-r03:
         ipv4_address: 10.227.0.2
       net-frr-r01-r03:
-        ipv4_address: 10.0.255.11
+        ipv4_address: 10.0.102.3
       net-frr-r02-r03:
-        ipv4_address: 10.0.253.3
+        ipv4_address: 10.0.103.3
       net-frr-r03-r04:
-        ipv4_address: 10.0.254.10
-      net-mgmt:
-        ipv4_address: 192.168.10.103
+        ipv4_address: 10.0.105.2
     cap_add:
       - cap_sys_admin
       - cap_net_admin
@@ -173,11 +169,9 @@ services:
       net-frr-r04:
         ipv4_address: 10.228.0.2
       net-frr-r02-r04:
-        ipv4_address: 10.0.254.2
+        ipv4_address: 10.0.104.3
       net-frr-r03-r04:
-        ipv4_address: 10.0.254.11
-      net-mgmt:
-        ipv4_address: 192.168.10.104
+        ipv4_address: 10.0.105.3
     cap_add:
       - cap_sys_admin
       - cap_net_admin
