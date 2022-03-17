@@ -1,9 +1,9 @@
 # OpenNMS Horizon BPG  monitoring 
 
 ## Background 
-Talk about what we are doing.
-why we are doing it 
-why it will be helpful 
+- Talk about what we are doing.
+- Why we are doing it 
+- Why it will be helpful 
 
 
 
