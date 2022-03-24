@@ -1,8 +1,7 @@
-# OpenNMS Horizon BPG  monitoring 
+# OpenNMS Horizon BPG  monitoring
 
 ## Background 
 Create a tutorial showing how OpenNMS can be configured to monitor BGP in a simulated "Internet Exchange”. Provide a working instance of OpenNMS deployed against a small scale BPG network using both soft and hard routers.
-
 
  Our team has been asked to produce documentation and video tutorial materials for OpenNMS for the purpose of a University project. We will be focusing on the following areas:
 - Deployment and configuration of OpenNMS against a working BGP network showcasing its ability to detect a variety of failures and subsequent alerts
@@ -11,10 +10,11 @@ Create a tutorial showing how OpenNMS can be configured to monitor BGP in a simu
 
 This will Provide indistry professionals an enviorment to test and view a working small scale  BGP topology in the form of software and hardware routers plus a monitoring slotion useing OpenNMS
 
+***Demo Gif***
+
 ## Network Topology
+
 ![alt text](https://github.com/4knigc12/COM617/blob/main/10.03.22%20Network%20Topology.jpg)
-
-
 
 ## IP Table 
 | Router | Interface   | IP  		      | Interface    | IP 	        | Interface    | IP 	    | Interface    | IP 	 |
@@ -24,32 +24,24 @@ This will Provide indistry professionals an enviorment to test and view a workin
 | R3     | LB          | 10.0.0.253 	| Int0/1       |10.0.255.6/30|Int0/2	    | 10.0.254.5/30 | Int0/0       |10.0.253.2/30|
 | R4     | LB          | 10.0.0.254 	| Int0/1       |10.0.254.1/30|Int0/2	    | 10.0.254.6/30 |              |		           |
 
-## 
-
 ## Getting sarted ##
 
+### Specification
 
-**Specification **
+TBC
 
+### Quick starter guide
 
-**Quick starter guide##
+    sudo docker exec -u frr -it frr-r01 vtysh
 
+### Defaults
 
+- OpenNMS Username: admin
+- OpenNMS Password: admin
+- OpenNMS URL: http://localhost:8980/opennms/index.jsp
 
-Usernames & Passwords
+## Further Reading
 
-
-
-#Demo Gif#
-
-
-
-
-
-
-
-
-## Documentation
 To learn more about OpenNMS Horizon [go to the complete documentation](https://docs.opennms.com/start-page/1.0.0/index.html)
 
 ## Community
