@@ -2,7 +2,7 @@
 # Backup all Cisco switches
 set Username "admin"
 set Password "COM617Team12"
-set TFTPHost
+set TFTPHost 10.0.0.111
 set timeout 20
 set DATE [exec date +%F-%H%M%S]
 
@@ -22,6 +22,8 @@ foreach host $hosts {
     expect "*assword: "
     send "$Password\r"
     expect "#"
+    send "write\r"
+    expect "\[OK\]"
     send "copy running-config tftp://$TFTPHost/$host/$host-$DATE.cfg\r"
     expect "Address or name of remote host*?"
     send "\r"
