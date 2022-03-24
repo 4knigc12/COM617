@@ -44,6 +44,8 @@ Usernames & Passwords
 **Referances**
 https://github.com/opennms-forge/bmp-playground
 https://vault.opennms.com/docs/opennms/releases/27.2.0/guide-admin/guide-admin.pdf
+https://blog.no42.org/article/bmp-playground/
+https://www.opennms.com/en/blog/2020-04-21-new-in-opennms-bgp-monitoring-protocol-bmp-functionality/
 
 
 
