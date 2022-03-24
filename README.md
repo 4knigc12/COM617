@@ -26,9 +26,28 @@ This will Provide indistry professionals an enviorment to test and view a workin
 
 ## 
 
-## Why OpenNMS Hoizon
+## Getting sarted ##
 
-## Who Uses OpenNMS?
+**Specification **
+
+**Quick starter guide##
+Usernames & Passwords
+
+#Demo Gif#
+
+
+
+
+
+
+
+**Referances**
+https://github.com/opennms-forge/bmp-playground
+https://vault.opennms.com/docs/opennms/releases/27.2.0/guide-admin/guide-admin.pdf
+
+
+
+
 
 ## Documentation
 To learn more about OpenNMS Horizon [go to the complete documentation](https://docs.opennms.com/start-page/1.0.0/index.html)
@@ -44,7 +63,13 @@ You can reach the OpenNMS community and developers via the following channels:
 
 
 
-
+**Authors **
+4thori85  
+4paynl49  
+4knigc12
+5smalh74 
+4frane88
+4criba61
 
 
 
