@@ -17,16 +17,46 @@ This will Provide indistry professionals an enviorment to test and view a workin
 
 
 ## IP Table 
-| First Header  | Second Header | Third Header  | forth Header |
-| ------------- | ------------- | ------------- | -------------|
-| Content Cell  | Content Cell  | Content Cell  | Content Cell |
-| Content Cell  | Content Cell  | Content Cell  | Content Cell |
+| Router | Interface   | IP  		      | Interface    | IP 	        | Interface    | IP 	    | Interface    | IP 	 |
+| -------| ------------| ------------| -------------|-------------| ----------| ------------- | -------------|-------------|
+| R1     | LB          | 10.0.0.251 	| Int0/1       |10.0.255.1/30|Int0/2	    | 10.0.255.5/30 | Int0/0       |10.0.0.0/24  |
+| R2     | LB          | 10.0.0.252 	| Int0/1       |10.0.255.2/30|Int0/2	    | 10.0.254.2/30 | Int0/0       |10.0.253.1/30|
+| R3     | LB          | 10.0.0.253 	| Int0/1       |10.0.255.6/30|Int0/2	    | 10.0.254.5/30 | Int0/0       |10.0.253.2/30|
+| R4     | LB          | 10.0.0.254 	| Int0/1       |10.0.254.1/30|Int0/2	    | 10.0.254.6/30 |              |		           |
 
 ## 
 
-## Why OpenNMS Hoizon
+## Getting sarted ##
 
-## Who Uses OpenNMS?
+
+**Specification **
+
+
+**Quick starter guide##
+
+
+
+Usernames & Passwords
+
+
+
+#Demo Gif#
+
+
+
+
+
+
+
+**Referances**
+https://github.com/opennms-forge/bmp-playground
+https://vault.opennms.com/docs/opennms/releases/27.2.0/guide-admin/guide-admin.pdf
+https://blog.no42.org/article/bmp-playground/
+https://www.opennms.com/en/blog/2020-04-21-new-in-opennms-bgp-monitoring-protocol-bmp-functionality/
+
+
+
+
 
 ## Documentation
 To learn more about OpenNMS Horizon [go to the complete documentation](https://docs.opennms.com/start-page/1.0.0/index.html)
@@ -42,7 +72,13 @@ You can reach the OpenNMS community and developers via the following channels:
 
 
 
-
+**Authors **
+4thori85  
+4paynl49  
+4knigc12
+5smalh74 
+4frane88
+4criba61
 
 
 
