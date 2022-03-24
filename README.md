@@ -17,10 +17,12 @@ This will Provide indistry professionals an enviorment to test and view a workin
 
 
 ## IP Table 
-| First Header  | Second Header | Third Header  | forth Header |
-| ------------- | ------------- | ------------- | -------------|
-| Content Cell  | Content Cell  | Content Cell  | Content Cell |
-| Content Cell  | Content Cell  | Content Cell  | Content Cell |
+| Router | Interface   | IP  		      | Interface    | IP 	        | Interface    | IP 	    | Interface    | IP 	 |
+| -------| ------------| ------------| -------------|-------------| ----------| ------------- | -------------|-------------|
+| R1     | 10.0.0.251  | 10.0.0.251 	| Int0/1       |10.0.255.1/30|Int0/2	    | 10.0.255.5/30 | Int0/0       |10.0.0.0/24  |
+| R2     | 10.0.0.252  | 10.0.0.252 	| Int0/1       |10.0.255.2/30|Int0/2	    | 10.0.254.2/30 | Int0/0       |10.0.253.1/30|
+| R3     | 10.0.0.253  | 10.0.0.253 	| Int0/1       |10.0.255.6/30|Int0/2	    | 10.0.254.5/30 | Int0/0       |10.0.253.2/30|
+| R4     | 10.0.0.254  | 10.0.0.254 	| Int0/1       |10.0.254.1/30|Int0/2	    | 10.0.254.6/30 |              |		           |
 
 ## 
 
