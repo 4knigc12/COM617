@@ -24,7 +24,7 @@ foreach host $hosts {
     expect "#"
     send "write\r"
     expect "\[OK\]"
-    send "copy running-config tftp://$TFTPHost/$host/$host.cfg\r"
+    send "copy running-config tftp://$TFTPHost/$host/$host-$DATE.cfg\r"
     expect "Address or name of remote host*?"
     send "\r"
     send "\r"
