@@ -48,20 +48,12 @@ Usernames & Passwords
 
 
 
-**Referances**
-https://github.com/opennms-forge/bmp-playground
-https://vault.opennms.com/docs/opennms/releases/27.2.0/guide-admin/guide-admin.pdf
-https://blog.no42.org/article/bmp-playground/
-https://www.opennms.com/en/blog/2020-04-21-new-in-opennms-bgp-monitoring-protocol-bmp-functionality/
-
-
-
-
 
 ## Documentation
 To learn more about OpenNMS Horizon [go to the complete documentation](https://docs.opennms.com/start-page/1.0.0/index.html)
 
 ## Community
+
 ### Contribution, Discussion and Support
 
 You can reach the OpenNMS community and developers via the following channels:
@@ -69,19 +61,22 @@ You can reach the OpenNMS community and developers via the following channels:
 - Q & A [Github Discussions](https://github.com/OpenNMS)
 - Community Support [Community Support](https://opennms.discourse.group/)
 
+### Refrences
 
+https://github.com/opennms-forge/bmp-playground
+https://vault.opennms.com/docs/opennms/releases/27.2.0/guide-admin/guide-admin.pdf
+https://blog.no42.org/article/bmp-playground/
+https://www.opennms.com/en/blog/2020-04-21-new-in-opennms-bgp-monitoring-protocol-bmp-functionality/
 
+### Authors
 
-**Authors **
-4thori85  
-4paynl49  
-4knigc12
-5smalh74 
-4frane88
-4criba61
+- 4thori85  
+- 4paynl49  
+- 4knigc12
+- 5smalh74
+- 4frane88
+- 4criba61
 
+### Thanks
 
-
-
-
-
+Thanks to Warren Earle and Craig Gallen for their help and support.
