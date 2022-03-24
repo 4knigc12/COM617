@@ -1,8 +1,8 @@
 #!/usr/bin/expect -f
 # Backup all Cisco switches
-set Username "admin"
-set Password "COM617Team12"
-set TFTPHost 10.0.0.111
+set Username [lindex $argv 0]
+set Password [lindex $argv 1]
+set TFTPHost [lindex $argv 2]
 set timeout 20
 set DATE [exec date +%F-%H%M%S]
 
