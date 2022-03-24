@@ -53,21 +53,22 @@
       name: 
       - docker-compose
 
-  # - name: Clone BMP Playground GIT repo
-  #   git:
-  #     repo: "https://github.com/opennms-forge/bmp-playground.git"
-  #     dest: "{{ bmp_playground_install_path }}"
-  #     force: yes
+  - name: Clone BMP Playground GIT repo
+    git:
+      repo: "https://github.com/4knigc12/COM617.gitt"
+      dest: "{{ bmp_playground_install_path }}"
+      force: yes
 
-  # - name: Ensure existing environment is removed
-  #   community.docker.docker_compose:
-  #     project_src: "{{ bmp_playground_install_path }}"
-  #     state: absent
+  - name: Ensure existing environment is removed
+    community.docker.docker_compose:
+      project_src: "{{ bmp_playground_install_path }}"
+      state: absent
 
   - name: Run `docker-compose up`
     community.docker.docker_compose:
+      project_src: "{{ bmp_playground_install_path }}"
       files:
-        - "docker-compose.yml"
+        - "{{ bmp_playground_install_path }}software-routers/docker-compose.yml"
       build: yes
     register: docker_compose_output
 
