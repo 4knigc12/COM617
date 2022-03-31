@@ -14,7 +14,7 @@ This will Provide indistry professionals an enviorment to test and view a workin
 
 ## Network Topology
 
-![alt text](https://github.com/4knigc12/COM617/blob/main/10.03.22%20Network%20Topology.jpg)
+![alt text](https://github.com/4knigc12/COM617/blob/main/software-routers/BGP%20Network%20Topology%20(1)-Virtual.jpg)
 
 ## IP Table 
 | Router | Interface   | IP  		      | Interface    | IP 	        | Interface    | IP 	    | Interface    | IP 	 |
