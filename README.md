@@ -55,10 +55,10 @@ You can reach the OpenNMS community and developers via the following channels:
 
 ### Refrences
 
-https://github.com/opennms-forge/bmp-playground
-https://vault.opennms.com/docs/opennms/releases/27.2.0/guide-admin/guide-admin.pdf
-https://blog.no42.org/article/bmp-playground/
-https://www.opennms.com/en/blog/2020-04-21-new-in-opennms-bgp-monitoring-protocol-bmp-functionality/
+[OpenMNS BMP](https://github.com/opennms-forge/bmp-playground)
+[OpenNMS Docs](https://vault.opennms.com/docs/opennms/releases/27.2.0/guide-admin/guide-admin.pdf)
+[BMP Playground](https://blog.no42.org/article/bmp-playground/)
+[OPENNMS BGP Monitoring](https://www.opennms.com/en/blog/2020-04-21-new-in-opennms-bgp-monitoring-protocol-bmp-functionality/) 
 [OpenBMP](https://www.openbmp.org/)
 
 ### Authors
