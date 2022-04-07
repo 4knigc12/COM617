@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+     http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+    <key id="breadcrumb-strategy" for="graphml" attr.name="breadcrumb-strategy" attr.type="string"/>
+    <key id="label" for="all" attr.name="label" attr.type="string"></key>
+    <key id="description" for="graph" attr.name="description" attr.type="string"></key>
+    <key id="namespace" for="graph" attr.name="namespace" attr.type="string"></key>
+    <key id="focus-strategy" for="graph" attr.name="focus-strategy" attr.type="string"></key>
+    <key id="focus-ids" for="graph" attr.name="focus-ids" attr.type="string"></key>
+    <key id="foreignSource" for="node" attr.name="foreignSource" attr.type="string"></key>
+    <key id="foreignID" for="node" attr.name="foreignID" attr.type="string"></key>
+    <key id="preferred-layout" for="graph" attr.name="preferred-layout" attr.type="string"></key>
+    <key id="vertex-status-provider" for="graph" attr.name="vertex-status-provider" attr.type="boolean"></key>
+    <key id="iconKey" for="node" attr.name="iconKey" attr.type="string"></key>
+    <key id="semantic-zoom-level" for="graph" attr.name="semantic-zoom-level" attr.type="int"/>
+    <data key="label">Network BGP</data>
+    <data key="breadcrumb-strategy">NONE</data>
+
+    <graph id="bgp-topology" edgedefault="undirected">
+        <data key="namespace">network-bgp</data>
+        <data key="focus-strategy">ALL</data>
+        <data key="vertex-status-provider">true</data>
+
+        <node id="frr-r01">
+            <data key="foreignSource">soft-routers</data>
+            <data key="label">frr-r01</data>
+            <data key="foreignID">frr-r01</data>
+            <data key="iconKey">router</data>
+        </node>
+
+        <node id="frr-r02">
+            <data key="foreignSource">soft-routers</data>
+            <data key="label">frr-r02</data>
+            <data key="foreignID">frr-r02</data>
+            <data key="iconKey">router</data>
+        </node>
+
+        <node id="frr-r03">
+            <data key="foreignSource">soft-routers</data>
+            <data key="label">frr-r03</data>
+            <data key="foreignID">frr-r03</data>
+            <data key="iconKey">router</data>
+        </node>
+
+        <node id="frr-r04">
+            <data key="foreignSource">soft-routers</data>
+            <data key="label">frr-r04</data>
+            <data key="foreignID">frr-r04</data>
+            <data key="iconKey">router</data>
+        </node>
+
+        <!-- Networks -->
+        <node id="net-as65550">
+            <data key="label">AS65550</data>
+            <data key="iconKey">vmware-network</data>
+        </node>
+
+        <node id="net-as65560">
+            <data key="label">AS65560</data>
+            <data key="iconKey">vmware-network</data>
+        </node>
+
+        <!-- Router to AS assignment-->
+        <edge id="frr-r01-net-as65550" source="frr-r01" target="net-as65550"/>
+        <edge id="frr-r02-net-as65550" source="frr-r02" target="net-as65550"/>
+        <edge id="frr-r03-net-as65550" source="frr-r03" target="net-as65550"/>
+        <edge id="frr-r03-net-as65560" source="frr-r04" target="net-as65550"/>
+
+        <!-- Peerings in local location -->
+        <edge id="r01-peering-r02" source="frr-r01" target="frr-r02"/>
+        <edge id="r01-peering-r03" source="frr-r01" target="frr-r03"/>
+
+        <edge id="r02-peering-r01" source="frr-r02" target="frr-r01"/>
+        <edge id="r02-peering-r03" source="frr-r02" target="frr-r03"/>
+
+        <edge id="r03-peering-r01" source="frr-r03" target="frr-r01"/>
+        <edge id="r03-peering-r02" source="frr-r03" target="frr-r02"/>
+
+    </graph>
+</graphml>
