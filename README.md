@@ -10,11 +10,13 @@ Create a tutorial showing how OpenNMS can be configured to monitor BGP in a simu
 
 This will Provide indistry professionals an enviorment to test and view a working small scale  BGP topology in the form of software and hardware routers plus a monitoring slotion useing OpenNMS
 
-***Demo Gif***
+### Video Demonstration
+
+![Demonstration](./software-routers/demo.gif)
 
 ## Network Topology
 
-![alt text](https://github.com/4knigc12/COM617/blob/main/software-routers/BGP%20Network%20Topology%20(1)-Virtual.jpg)
+![alt text](./software-routers/BGP%20Network%20Topology%20(1)-Virtual.jpg)
 
 ## IP Table 
 | Router | Interface   | IP  		      | Interface    | IP 	        | Interface    | IP 	    | Interface    | IP 	 |
