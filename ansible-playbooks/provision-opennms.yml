@@ -9,7 +9,7 @@
     headers:
       Content-Type: "application/xml"
       Accept: "application/xml"
-    body: "{{lookup('template','templates/foreign-source.xml')}}"
+    body: "{{lookup('template','software-routers/api-import/foreign-source.xml')}}"
     status_code: 202
 
 - name: Provision OpenNMS - Create Requisition OpenNMS Stack
@@ -21,7 +21,7 @@
     headers: 
       Content-Type: "application/xml"
       Accept: "application/xml"
-    body: "{{lookup('template','templates/opennms-stack.xml')}}"
+    body: "{{lookup('template','software-routers/api-import/opennms-stack.xml')}}"
     status_code: 202
 
 - name: Provision OpenNMS - Create Requisition BGP Router
@@ -33,7 +33,7 @@
     headers: 
       Content-Type: "application/xml"
       Accept: "application/xml"
-    body: "{{lookup('template','templates/bgp-routers.xml')}}"
+    body: "{{lookup('template','software-routers/api-import/soft-routers.xml')}}"
     status_code: 202
 
 - name: Provision OpenNMS - Import requisition for OpenNMS Stack
@@ -46,7 +46,7 @@
 
 - name: Provision OpenNMS - Import requisition for BGP Router
   uri:
-    url: "http://localhost:{{ opennms_port }}/opennms/rest/requisitions/bgp-routers/import"
+    url: "http://localhost:{{ opennms_port }}/opennms/rest/requisitions/soft-routers/import"
     user: "{{ opennms_username }}"
     password: "{{ opennms_password }}"
     method: PUT

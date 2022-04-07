@@ -60,9 +60,9 @@ It can take 5-10 mins to fully provision the environment
 
 ### Connecting to the Environment
 
-From the host VM, issue the following command to connect to the frr-r01 shell:
+From the host VM, issue the following command to connect to the router shell. Replace frr-r0x with the router number
 
-    sudo docker exec -u frr -it frr-r01 vtysh
+    sudo docker exec -u frr -it frr-r0x vtysh
 
 ### Defaults
 
