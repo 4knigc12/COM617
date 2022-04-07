@@ -16,7 +16,7 @@ The code and documentation shown here should be considered a starting point for 
 
 ### Video Demonstration
 
-![Demonstration 3](./software-routers/demo-fancy.gif)
+![Demonstration](./software-routers/demo-fancy.gif)
 
 ## Network Topology
 
@@ -58,7 +58,7 @@ It can take 5-10 mins to fully provision the environment
 - To suspend the host to access it later, use `vagrant suspend`
 - To delete the environment use `vagrant destroy`
 
-### Connecting to Environment
+### Connecting to the Environment
 
 From the host VM, issue the following command to connect to the frr-r01 shell:
 
@@ -69,6 +69,8 @@ From the host VM, issue the following command to connect to the frr-r01 shell:
 - OpenNMS Username: admin
 - OpenNMS Password: admin
 - OpenNMS URL: http://localhost:8980/opennms/index.jsp
+
+![OpenNMS Interface](./software-routers/opennms-demo-fancy.gif)
 
 ## Further Reading
 
