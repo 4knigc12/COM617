@@ -20,6 +20,8 @@ The code and documentation shown here should be considered a starting point for 
 
 ![Demonstration 2](./software-routers/screen-capture.gif)
 
+![Demonstration 3](./software-routers/demo-fancy.gif)
+
 ## Network Topology
 
 ![alt text](./software-routers/BGP%20Network%20Topology%20(1)-Virtual.jpg)
