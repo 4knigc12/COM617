@@ -22,13 +22,14 @@ The code and documentation shown here should be considered a starting point for 
 
 ![alt text](./software-routers/BGP%20Network%20Topology%20(1)-Virtual.jpg)
 
-## IP Table 
-| Router | Interface   | IP  		      | Interface    | IP 	        | Interface    | IP 	    | Interface    | IP 	 |
-| -------| ------------| ------------| -------------|-------------| ----------| ------------- | -------------|-------------|
-| R1     | LB          | 10.0.0.251 	| Int0/1       |10.0.255.1/30|Int0/2	    | 10.0.255.5/30 | Int0/0       |10.0.0.0/24  |
-| R2     | LB          | 10.0.0.252 	| Int0/1       |10.0.255.2/30|Int0/2	    | 10.0.254.2/30 | Int0/0       |10.0.253.1/30|
-| R3     | LB          | 10.0.0.253 	| Int0/1       |10.0.255.6/30|Int0/2	    | 10.0.254.5/30 | Int0/0       |10.0.253.2/30|
-| R4     | LB          | 10.0.0.254 	| Int0/1       |10.0.254.1/30|Int0/2	    | 10.0.254.6/30 |              |		           |
+## IP Table
+
+| Router | Interface   | IP           | Interface    | IP           | Interface    | IP       | Interface     | IP          |
+| -------| ------------| ------------ | -------------|-------------| ----------| ------------- | -------------|-------------|
+| R1     | LB          | 10.0.0.251   | Int0/1       |10.0.255.1/30|Int0/2      | 10.0.255.5/30 | Int0/0       |10.0.0.0/24  |
+| R2     | LB          | 10.0.0.252   | Int0/1       |10.0.255.2/30|Int0/2      | 10.0.254.2/30 | Int0/0       |10.0.253.1/30|
+| R3     | LB          | 10.0.0.253   | Int0/1       |10.0.255.6/30|Int0/2      | 10.0.254.5/30 | Int0/0       |10.0.253.2/30|
+| R4     | LB          | 10.0.0.254   | Int0/1       |10.0.254.1/30|Int0/2      | 10.0.254.6/30 |              |             |
 
 ## Getting sarted
 
@@ -68,7 +69,7 @@ From the host VM, issue the following command to connect to the router shell. Re
 
 - OpenNMS Username: admin
 - OpenNMS Password: admin
-- OpenNMS URL: http://localhost:8980/opennms/index.jsp
+- OpenNMS URL: [http://localhost:8980/opennms/index.jsp](http://localhost:8980/opennms/index.jsp)
 
 ![OpenNMS Interface](./software-routers/gifs/opennms-demo-fancy.gif)
 
@@ -90,7 +91,7 @@ You can reach the OpenNMS community and developers via the following channels:
 [OpenMNS BMP](https://github.com/opennms-forge/bmp-playground),
 [OpenNMS Docs](https://vault.opennms.com/docs/opennms/releases/27.2.0/guide-admin/guide-admin.pdf),
 [BMP Playground](https://blog.no42.org/article/bmp-playground/),
-[OPENNMS BGP Monitoring](https://www.opennms.com/en/blog/2020-04-21-new-in-opennms-bgp-monitoring-protocol-bmp-functionality/), 
+[OPENNMS BGP Monitoring](https://www.opennms.com/en/blog/2020-04-21-new-in-opennms-bgp-monitoring-protocol-bmp-functionality/),
 [OpenBMP](https://www.openbmp.org/),
 [FFRouting](https://frrouting.org/)
 
