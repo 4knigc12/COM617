@@ -78,5 +78,8 @@
         <edge id="r03-peering-r01" source="frr-r03" target="frr-r01"/>
         <edge id="r03-peering-r02" source="frr-r03" target="frr-r02"/>
 
+        <edge id="r04-peering-r02" source="frr-r04" target="frr-r02"/>
+        <edge id="r04-peering-r03" source="frr-r04" target="frr-r03"/>
+
     </graph>
 </graphml>
