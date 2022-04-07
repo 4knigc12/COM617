@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model-import xmlns="http://xmlns.opennms.org/xsd/config/model-import" date-stamp="2016-10-28T10:50:02.025Z" foreign-source="soft-routers" last-import="2016-10-28T10:51:29.354Z">
+  <node location="Default" foreign-id="FRR-R01" node-label="FRR-R01">
+    <interface ip-addr="192.168.10.201" status="1" snmp-primary="N">
+      <monitored-service service-name="ICMP"/>
+    </interface>
+    <asset name="longitude" value="-1.400380"/>
+    <asset name="latitude" value="50.908320"/>
+  </node>
+</model-import>
