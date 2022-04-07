@@ -16,7 +16,7 @@ The code and documentation shown here should be considered a starting point for 
 
 ### Video Demonstration
 
-![Demonstration](./software-routers/gifs/demo-fancy-comp.gif)
+![Demonstration](./software-routers/gifs/demo-fancy.gif)
 
 ## Network Topology
 
@@ -70,7 +70,7 @@ From the host VM, issue the following command to connect to the frr-r01 shell:
 - OpenNMS Password: admin
 - OpenNMS URL: http://localhost:8980/opennms/index.jsp
 
-![OpenNMS Interface](./software-routers/gifs/opennms-demo-fancy-comp.gif)
+![OpenNMS Interface](./software-routers/gifs/opennms-demo-fancy.gif)
 
 ## Further Reading
 
