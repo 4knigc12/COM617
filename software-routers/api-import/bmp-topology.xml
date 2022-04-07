@@ -15,11 +15,11 @@
     <key id="vertex-status-provider" for="graph" attr.name="vertex-status-provider" attr.type="boolean"></key>
     <key id="iconKey" for="node" attr.name="iconKey" attr.type="string"></key>
     <key id="semantic-zoom-level" for="graph" attr.name="semantic-zoom-level" attr.type="int"/>
-    <data key="label">Network BGP</data>
+    <data key="label">BGP Topology</data>
     <data key="breadcrumb-strategy">NONE</data>
 
     <graph id="bgp-topology" edgedefault="undirected">
-        <data key="namespace">network-bgp</data>
+        <data key="namespace">bgp-toplogy</data>
         <data key="focus-strategy">ALL</data>
         <data key="vertex-status-provider">true</data>
 
