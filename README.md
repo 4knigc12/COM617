@@ -1,14 +1,18 @@
 # OpenNMS Horizon BPG  monitoring
 
-## Background 
-Create a tutorial showing how OpenNMS can be configured to monitor BGP in a simulated "Internet Exchange”. Provide a working instance of OpenNMS deployed against a small scale BPG network using both soft and hard routers.
+## Background
 
- Our team has been asked to produce documentation and video tutorial materials for OpenNMS for the purpose of a University project. We will be focusing on the following areas:
-- Deployment and configuration of OpenNMS against a working BGP network showcasing its ability to detect a variety of failures and subsequent alerts
-- Using software and bare metal routing to configure a BGP network.​
- -Provide repeatable and version-controlled configurations accessible within a shared GitHub repository.​.
+This project shows how OpenNMS can be configured to monitor BGP in a simulated "Internet Exchange”. It deploys a containerised instance of OpenNMS deployed against a small scale BPG network using FRRouting software routers.
 
-This will Provide indistry professionals an enviorment to test and view a working small scale  BGP topology in the form of software and hardware routers plus a monitoring slotion useing OpenNMS
+This documenttion covers:
+
+- Environment creation:
+  - Vagrant file to deploy a virtual environment.
+  - Docker Compose to deploy containers.
+- Deployment and configuration of OpenNMS against a working BGP network showcasing its ability to detect a variety of failures and subsequent alerts.
+- Provides repeatable and version-controlled configurations accessible within this shared GitHub repository.​
+
+The code and documentation shown here should be considered a starting point for anyone looking to establish the functionality of OpenNMS when used to monitor BGP and OpenBMP. We encourage you build on this and tailor it to your environment, it is not meant for production deployment.
 
 ### Video Demonstration
 
