@@ -30,13 +30,37 @@ The code and documentation shown here should be considered a starting point for 
 | R3     | LB          | 10.0.0.253 	| Int0/1       |10.0.255.6/30|Int0/2	    | 10.0.254.5/30 | Int0/0       |10.0.253.2/30|
 | R4     | LB          | 10.0.0.254 	| Int0/1       |10.0.254.1/30|Int0/2	    | 10.0.254.6/30 |              |		           |
 
-## Getting sarted ##
+## Getting sarted
 
-### Specification
+## Host Minimum Specifications
 
-TBC
+The minimum requirements for free resource on the host:
 
-### Quick starter guide
+vCPU: 2
+
+RAM: 6GB
+
+HDD: 50GB
+
+## Installation
+
+- Install [Vagrant](https://www.vagrantup.com/)
+- Install [Oracle Virtual Box](https://www.virtualbox.org/)
+- Clone this repo to a Windows PC
+- Run `vagrant up` in this directory
+
+> **Note:**
+It can take 5-10 mins to fully provision the environment
+
+## Usage
+
+- To connect to the host use `vagrant ssh`
+- To suspend the host to access it later, use `vagrant suspend`
+- To delete the environment use `vagrant destroy`
+
+### Connecting to Environment
+
+From the host VM, issue the following command to connect to the frr-r01 shell:
 
     sudo docker exec -u frr -it frr-r01 vtysh
 
@@ -66,6 +90,7 @@ You can reach the OpenNMS community and developers via the following channels:
 [BMP Playground](https://blog.no42.org/article/bmp-playground/),
 [OPENNMS BGP Monitoring](https://www.opennms.com/en/blog/2020-04-21-new-in-opennms-bgp-monitoring-protocol-bmp-functionality/), 
 [OpenBMP](https://www.openbmp.org/),
+[FFRouting](https://frrouting.org/)
 
 ### Authors
 
