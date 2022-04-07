@@ -4,15 +4,15 @@
 
 This project shows how OpenNMS can be configured to monitor BGP in a simulated "Internet Exchange”. It deploys a containerised instance of OpenNMS deployed against a small scale BPG network using FRRouting software routers.
 
-This documenttion covers:
+This documentation covers:
 
 - Environment creation:
   - Vagrant file to deploy a virtual environment.
   - Docker Compose to deploy containers.
 - Deployment and configuration of OpenNMS against a working BGP network showcasing its ability to detect a variety of failures and subsequent alerts.
-- Provides repeatable and version-controlled configurations accessible within this shared GitHub repository.​
+- Provides repeatable and version-controlled configurations accessible within this shared GitHub repository.
 
-The code and documentation shown here should be considered a starting point for anyone looking to establish the functionality of OpenNMS when used to monitor BGP and OpenBMP. We encourage you build on this and tailor it to your environment, it is not meant for production deployment.
+The code and documentation shown here should be considered a starting point for anyone looking to establish the functionality of OpenNMS when used to monitor BGP and OpenBMP. We encourage you build on this and tailor it to your environment.  It is not meant for production deployment.
 
 ### Video Demonstration
 
