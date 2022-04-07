@@ -16,10 +16,6 @@ The code and documentation shown here should be considered a starting point for 
 
 ### Video Demonstration
 
-![Demonstration 1](./software-routers/demo-with-title.gif)
-
-![Demonstration 2](./software-routers/screen-capture.gif)
-
 ![Demonstration 3](./software-routers/demo-fancy.gif)
 
 ## Network Topology
@@ -97,6 +93,8 @@ You can reach the OpenNMS community and developers via the following channels:
 [FFRouting](https://frrouting.org/)
 
 ### Authors
+
+Created by students from Southampton Solent University, COM617 Team 12:
 
 - 4thori85  
 - 4paynl49  
