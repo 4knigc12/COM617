@@ -66,7 +66,7 @@
         <edge id="frr-r01-net-as65550" source="frr-r01" target="net-as65550"/>
         <edge id="frr-r02-net-as65550" source="frr-r02" target="net-as65550"/>
         <edge id="frr-r03-net-as65550" source="frr-r03" target="net-as65550"/>
-        <edge id="frr-r03-net-as65560" source="frr-r04" target="net-as65550"/>
+        <edge id="frr-r03-net-as65560" source="frr-r04" target="net-as65560"/>
 
         <!-- Peerings in local location -->
         <edge id="r01-peering-r02" source="frr-r01" target="frr-r02"/>
