@@ -12,7 +12,7 @@ This will Provide indistry professionals an enviorment to test and view a workin
 
 ### Video Demonstration
 
-![Demonstration](./software-routers/demo.gif)
+![Demonstration](./software-routers/demo-with-title.gif)
 
 ## Network Topology
 
