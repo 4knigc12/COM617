@@ -16,7 +16,9 @@ The code and documentation shown here should be considered a starting point for 
 
 ### Video Demonstration
 
-![Demonstration](./software-routers/demo-with-title.gif)
+![Demonstration 1](./software-routers/demo-with-title.gif)
+
+![Demonstration 2](./software-routers/screen-capture.gif)
 
 ## Network Topology
 
