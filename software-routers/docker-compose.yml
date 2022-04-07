@@ -134,8 +134,8 @@ services:
         ipv4_address: 10.0.103.2
       net-frr-r02-r04:
         ipv4_address: 10.0.104.2
-      net-mgmt:
-        ipv4_address: 192.168.10.202
+      # net-mgmt:
+      #   ipv4_address: 192.168.10.202
     cap_add:
       - cap_sys_admin
       - cap_net_admin
@@ -189,21 +189,21 @@ services:
 
 # For troubleshoting
 
-  wireshark:
-    image: linuxserver/wireshark
-    container_name: wireshark
-    cap_add:
-      - NET_ADMIN
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/London
-    ports:
-      - 3000:3000 #optional
-    networks:
-      net-frr-r02:
-      net-mgmt:
-        ipv4_address: 192.168.10.5
-    volumes:
-      - /path/to/config:/config
-    restart: unless-stopped
+  # wireshark:
+  #   image: linuxserver/wireshark
+  #   container_name: wireshark
+  #   cap_add:
+  #     - NET_ADMIN
+  #   environment:
+  #     - PUID=1000
+  #     - PGID=1000
+  #     - TZ=Europe/London
+  #   ports:
+  #     - 3000:3000 #optional
+  #   networks:
+  #     net-frr-r02:
+  #     net-mgmt:
+  #       ipv4_address: 192.168.10.5
+  #   volumes:
+  #     - /path/to/config:/config
+  #   restart: unless-stopped
