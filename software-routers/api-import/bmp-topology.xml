@@ -23,31 +23,31 @@
         <data key="focus-strategy">ALL</data>
         <data key="vertex-status-provider">true</data>
 
-        <node id="frr-r01">
+        <node id="FRR-R01">
             <data key="foreignSource">soft-routers</data>
-            <data key="label">frr-r01</data>
-            <data key="foreignID">frr-r01</data>
+            <data key="label">FRR-R01</data>
+            <data key="foreignID">FRR-R01</data>
             <data key="iconKey">router</data>
         </node>
 
-        <node id="frr-r02">
+        <node id="FRR-R02">
             <data key="foreignSource">soft-routers</data>
-            <data key="label">frr-r02</data>
-            <data key="foreignID">frr-r02</data>
+            <data key="label">FRR-R02</data>
+            <data key="foreignID">FRR-R02</data>
             <data key="iconKey">router</data>
         </node>
 
-        <node id="frr-r03">
+        <node id="FRR-R03">
             <data key="foreignSource">soft-routers</data>
-            <data key="label">frr-r03</data>
-            <data key="foreignID">frr-r03</data>
+            <data key="label">FRR-R03</data>
+            <data key="foreignID">FRR-R03</data>
             <data key="iconKey">router</data>
         </node>
 
-        <node id="frr-r04">
+        <node id="FRR-R04">
             <data key="foreignSource">soft-routers</data>
-            <data key="label">frr-r04</data>
-            <data key="foreignID">frr-r04</data>
+            <data key="label">FRR-R04</data>
+            <data key="foreignID">FRR-R04</data>
             <data key="iconKey">router</data>
         </node>
 
@@ -63,11 +63,11 @@
         </node> -->
 
         <!-- Peerings in local location -->
-        <edge id="r01-peering-r02" source="frr-r01" target="frr-r02"/>
-        <edge id="r01-peering-r03" source="frr-r01" target="frr-r03"/>
-        <edge id="r02-peering-r03" source="frr-r02" target="frr-r03"/>
-        <edge id="r02-peering-r04" source="frr-r02" target="frr-r04"/>
-        <edge id="r03-peering-r04" source="frr-r03" target="frr-r04"/>
+        <edge id="r01-peering-r02" source="FRR-R01" target="FRR-R02"/>
+        <edge id="r01-peering-r03" source="FRR-R01" target="FRR-R03"/>
+        <edge id="r02-peering-r03" source="FRR-R02" target="FRR-R03"/>
+        <edge id="r02-peering-r04" source="FRR-R02" target="FRR-R04"/>
+        <edge id="r03-peering-r04" source="FRR-R03" target="FRR-R04"/>
 
     </graph>
 </graphml>
