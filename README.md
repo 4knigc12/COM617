@@ -43,35 +43,49 @@ RAM: 6GB
 
 HDD: 50GB
 
-## Installation
+> **Note:**
+It can take 5-10 mins to fully provision the environment if resouces are low
+
+## Installation - Option 1 (Easy install) - Vagrant
+
+Vagrant can be used to build and provision an Ubuntu virtual machine on Oracle Virtual Box. This makes it simple to build the environment with very little involvement.
 
 - Install [Vagrant](https://www.vagrantup.com/)
 - Install [Oracle Virtual Box](https://www.virtualbox.org/)
 - Clone this repo to a Windows PC
 - Run `vagrant up` in this directory
 
-> **Note:**
-It can take 5-10 mins to fully provision the environment
+### Vagrant Usage
 
-## Usage
+A comprehensive cheat sheet can be found here: [wpscholar/vagrant-cheat-sheet.md](https://gist.github.com/wpscholar/a49594e2e2b918f4d0c4), but to get started here are some basic commands to manage Vagrant.
 
 - To connect to the host use `vagrant ssh`
 - To suspend the host to access it later, use `vagrant suspend`
 - To delete the environment use `vagrant destroy`
 
-### Connecting to the Environment
+## Installation - Option 2 - Ansible
 
-From the host VM, issue the following command to connect to the router shell. Replace frr-r0x with the router number
+If you already have a suitable host machine that meets or exceeds the minimum specifications above, you can use the Ansible playbook to provision the environment. The playbook installs Docker, Docker Compose and other required components and then provisions OpenNMS Horizon and the FRRouting software routers into containers.
 
-    sudo docker exec -u frr -it frr-r0x vtysh
+- Install [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+- Clone this repository
+- Execute the playbook `./ansible-playbooks/deploy-com617.yml`
 
-### Defaults
+## Connecting to the Environment
+
+### Connecting to OpenNMS
 
 - OpenNMS Username: admin
 - OpenNMS Password: admin
 - OpenNMS URL: [http://localhost:8980/opennms/index.jsp](http://localhost:8980/opennms/index.jsp)
 
 ![OpenNMS Interface](./software-routers/gifs/opennms-demo-fancy.gif)
+
+### Conecting to FRR Routers
+
+From the host VM, issue the following command to connect to the router shell. Replace frr-r0x with the router number
+
+    sudo docker exec -u frr -it frr-r0x vtysh
 
 ## Further Reading
 
