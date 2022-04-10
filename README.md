@@ -22,7 +22,9 @@ The code and documentation shown here should be considered a starting point for 
 
 ![alt text](./software-routers/BGP%20Network%20Topology%20(1)-Virtual.jpg)
 
-## IP Table
+### IP Table
+
+__NEEDS UPDATE__
 
 | Router | Interface   | IP           | Interface    | IP           | Interface    | IP       | Interface     | IP          |
 | -------| ------------| ------------ | -------------|-------------| ----------| ------------- | -------------|-------------|
@@ -102,16 +104,16 @@ You can reach the OpenNMS community and developers via the following channels:
 
 ### Refrences
 
-[OpenMNS BMP](https://github.com/opennms-forge/bmp-playground),
+[OpenMNS Forge BMP Playground](https://github.com/opennms-forge/bmp-playground),
 [OpenNMS Docs](https://vault.opennms.com/docs/opennms/releases/27.2.0/guide-admin/guide-admin.pdf),
 [BMP Playground](https://blog.no42.org/article/bmp-playground/),
-[OPENNMS BGP Monitoring](https://www.opennms.com/en/blog/2020-04-21-new-in-opennms-bgp-monitoring-protocol-bmp-functionality/),
+[OpenNMS BGP Monitoring](https://www.opennms.com/en/blog/2020-04-21-new-in-opennms-bgp-monitoring-protocol-bmp-functionality/),
 [OpenBMP](https://www.openbmp.org/),
 [FFRouting](https://frrouting.org/)
 
 ### Authors
 
-Created by students from Southampton Solent University, COM617 Team 12:
+Created by students from [Solent University Southampton](https://www.solent.ac.uk/), COM617 Team 12:
 
 - 4thori85  
 - 4paynl49  
