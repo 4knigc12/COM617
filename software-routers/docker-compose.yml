@@ -187,6 +187,18 @@ services:
       - cap_net_admin
     restart: unless-stopped
 
+# For traffic gen
+
+  web:
+  image: nginx
+  container_name: wibble
+  ports:
+    - "80:80"
+  network:
+      net-frr-r04:
+        ipv4_address: 10.228.0.100
+    restart: unless-stopped
+
 # For troubleshoting
 
   # wireshark:
