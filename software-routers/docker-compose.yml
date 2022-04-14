@@ -190,8 +190,8 @@ services:
 # For traffic gen
 
   web:
-  image: nginx
-  container_name: wibble
+    image: nginx
+    container_name: wibble
   ports:
     - "80:80"
   networks:
