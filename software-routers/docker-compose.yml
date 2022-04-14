@@ -197,7 +197,7 @@ services:
   network:
       net-frr-r04:
         ipv4_address: 10.228.0.100
-    restart: unless-stopped
+  restart: unless-stopped
 
 # For troubleshoting
 
