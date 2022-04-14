@@ -202,8 +202,12 @@ services:
 services:
   master:
     image: locustio/locust
+    container_name: locust-traffic-testing
     ports:
       - "8089:8089"
+    networks:
+      net-frr-r01:
+        ipv4_address: 10.225.0.100
     volumes:
       - ./locust/:/mnt/locust
     command: -f /mnt/locust/locustfile.py
