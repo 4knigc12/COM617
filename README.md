@@ -16,6 +16,8 @@ The code and documentation shown here should be considered a starting point for 
 
 ### Video Demonstration
 
+Building Docker environment with Docker Compose:
+
 ![Demonstration](./software-routers/gifs/demo-fancy.gif)
 
 ## Network Topology
@@ -24,7 +26,7 @@ The code and documentation shown here should be considered a starting point for 
 
 ### IP Table
 
-__NEEDS UPDATE__
+NEEDS UPDATE
 
 | Router | Interface   | IP           | Interface    | IP           | Interface    | IP       | Interface     | IP          |
 | -------| ------------| ------------ | -------------|-------------| ----------| ------------- | -------------|-------------|
@@ -77,9 +79,13 @@ If you already have a suitable host machine that meets or exceeds the minimum sp
 
 ### Connecting to OpenNMS
 
+Connect to the OpenNMS environment through a web browser on the host machine. Vagrant will forward the port to localhost automatically, if using a remote server you might need to browse to the hostname of the server.
+
 - OpenNMS Username: admin
 - OpenNMS Password: admin
 - OpenNMS URL: [http://localhost:8980/opennms/index.jsp](http://localhost:8980/opennms/index.jsp)
+
+Logging on to OpenNMS, viewing alerts and topology:
 
 ![OpenNMS Interface](./software-routers/gifs/opennms-demo-fancy.gif)
 
@@ -88,6 +94,8 @@ If you already have a suitable host machine that meets or exceeds the minimum sp
 From the host VM, issue the following command to connect to the router shell. Replace frr-r0x with the router number
 
     sudo docker exec -u frr -it frr-r0x vtysh
+
+Once on the VTY Shell, the router can be managed or configured using [Terminal Mode Commands](https://docs.frrouting.org/en/latest/basic.html#terminal-mode-commands)
 
 ## Further Reading
 
