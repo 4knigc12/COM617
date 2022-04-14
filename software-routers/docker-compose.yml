@@ -210,7 +210,7 @@ services:
         ipv4_address: 10.225.0.100
     volumes:
       - ./locust/:/mnt/locust
-    command: -f /mnt/locust/locustfile.py
+    command: -d -f /mnt/locust/locustfile.py
 
 # For troubleshoting
 
