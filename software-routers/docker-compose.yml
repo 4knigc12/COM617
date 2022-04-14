@@ -194,9 +194,9 @@ services:
   container_name: wibble
   ports:
     - "80:80"
-  network:
-      net-frr-r04:
-        ipv4_address: 10.228.0.100
+  networks:
+    net-frr-r04:
+      ipv4_address: 10.228.0.100
   restart: unless-stopped
 
 # For troubleshoting
