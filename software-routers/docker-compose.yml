@@ -191,7 +191,7 @@ services:
 
   web:
     image: nginx
-    container_name: wibble
+    container_name: nginx-traffic-testing
     ports:
       - "80:80"
     networks:
@@ -206,13 +206,7 @@ services:
       - "8089:8089"
     volumes:
       - ./locust/:/mnt/locust
-    command: -f /mnt/locust/locustfile.py --master -H http://master:8089
-  
-  worker:
-    image: locustio/locust
-    volumes:
-      - ./locust/:/mnt/locust
-    command: -f /mnt/locust/locustfile.py --worker --master-host master
+    command: -f /mnt/locust/locustfile.py
 
 # For troubleshoting
 
