@@ -24,16 +24,30 @@ Building Docker environment with Docker Compose:
 
 ![alt text](./software-routers/BGP%20Network%20Topology%20(1)-Virtual.jpg)
 
-### IP Table
+### Device Information Table
 
-NEEDS UPDATE
+This shows information about the devices in the network
 
-| Router | Interface   | IP           | Interface    | IP           | Interface    | IP       | Interface     | IP          |
-| -------| ------------| ------------ | -------------|-------------| ----------| ------------- | -------------|-------------|
-| R1     | LB          | 10.0.0.251   | Int0/1       |10.0.255.1/30|Int0/2      | 10.0.255.5/30 | Int0/0       |10.0.0.0/24  |
-| R2     | LB          | 10.0.0.252   | Int0/1       |10.0.255.2/30|Int0/2      | 10.0.254.2/30 | Int0/0       |10.0.253.1/30|
-| R3     | LB          | 10.0.0.253   | Int0/1       |10.0.255.6/30|Int0/2      | 10.0.254.5/30 | Int0/0       |10.0.253.2/30|
-| R4     | LB          | 10.0.0.254   | Int0/1       |10.0.254.1/30|Int0/2      | 10.0.254.6/30 |              |             |
+| Device   | Management IP   | BGP AS       | BGP Neighbors             |
+| ---------| ----------------| ------------ | --------------------------|
+| FRR-R01  | 192.168.10.201  | AS65550      | FRR-R03, FRR-R03          |
+| FRR-R02  | 192.168.10.202  | AS65550      | FRR-R01, FRR-R03, FRR-R04 |
+| FRR-R03  | 192.168.10.203  | AS65550      | FRR-R01, FRR-R02, FRR-R04 |
+| FRR-R04  | 192.168.10.204  | AS65560      | FRR-R03, FRR-R03          |
+| OpenNMS  | 192.168.10.101  | N/A          | N/A                       |
+| Database | 192.168.10.3    | N/A          | N/A                       |
+
+#### Interconnect Networks
+
+These networks are used to interconnect the routers.
+
+| Network          | Subnet          |
+| -----------------| ----------------|
+| FRR-R01-FRR-R02  | 10.0.101.0/29   |
+| FRR-R01-FRR-R03  | 10.0.102.0/29   |
+| FRR-R02-FRR-R03  | 10.0.103.0/29   |
+| FRR-R02-FRR-R04  | 10.0.104.0/29   |
+| FRR-R03-FRR-R04  | 10.0.105.0/29   |
 
 ## Getting sarted
 
