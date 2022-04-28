@@ -59,7 +59,7 @@
       dest: "{{ com617_install_path }}"
       force: yes
 
-  - name: Ensure existing environment is removed
+  - name: Remove existing environment
     community.docker.docker_compose:
       project_src: "{{ com617_install_path }}software-routers/"
       state: absent

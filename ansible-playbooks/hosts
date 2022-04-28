@@ -1,0 +1,2 @@
+[COM617]
+127.0.0.1 ansible_connection=local com617_install_path="/usr/local/com617/" opennms_port=8980 opennms_username="admin" opennms_password="admin"
