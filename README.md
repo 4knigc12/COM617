@@ -83,11 +83,21 @@ A comprehensive cheat sheet can be found here: [wpscholar/vagrant-cheat-sheet.md
 
 ## Installation - Option 2 - Ansible
 
-If you already have a suitable host machine that meets or exceeds the minimum specifications above, you can use the Ansible playbook to provision the environment. The playbook installs Docker, Docker Compose and other required components and then provisions OpenNMS Horizon and the FRRouting software routers into containers.
+If you already have a suitable Ubutu Linux host machine that meets or exceeds the minimum specifications above, you can use the Ansible playbook to provision the environment. The playbook installs Docker, Docker Compose and other required components and then provisions OpenNMS Horizon and the FRRouting software routers into containers. Ansible version 2.10+ is required.
 
 - Install [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+
+  sudo apt install ansible
+  ansible --version
+
 - Clone this repository
+
+  git clone https://github.com/4knigc12/COM617.git
+  cd COM617/
+
 - Execute the playbook `./ansible-playbooks/deploy-com617.yml`
+
+  sudo ansible-playbook ansible-playbooks/deploy-com617.yml -i ansible-playbooks/hosts
 
 ## Connecting to the Environment
 
