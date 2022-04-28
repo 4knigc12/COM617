@@ -52,6 +52,10 @@
     method: PUT
     status_code: 202
 
+- name: Pause for 5 seconds
+  pause:
+    seconds: 5
+
 - name: Provision OpenNMS - Create GraphML Topology
   uri:
     url: "http://localhost:{{ opennms_port }}/opennms/rest/graphml/bmp-topology"
