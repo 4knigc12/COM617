@@ -87,17 +87,17 @@ If you already have a suitable Ubutu Linux host machine that meets or exceeds th
 
 - Install [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
-  sudo apt install ansible
-  ansible --version
+      sudo apt install ansible
+      ansible --version
 
 - Clone this repository
 
-  git clone https://github.com/4knigc12/COM617.git
-  cd COM617/
+      git clone https://github.com/4knigc12/COM617.git
+      cd COM617/
 
 - Execute the playbook `./ansible-playbooks/deploy-com617.yml`
 
-  sudo ansible-playbook ansible-playbooks/deploy-com617.yml -i ansible-playbooks/hosts
+      sudo ansible-playbook ansible-playbooks/deploy-com617.yml -i ansible-playbooks/hosts
 
 ## Connecting to the Environment
 
