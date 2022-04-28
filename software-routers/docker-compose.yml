@@ -199,7 +199,11 @@ services:
         ipv4_address: 10.228.0.100
     restart: unless-stopped
 
+<<<<<<< HEAD
   locust:
+=======
+  locust-traffic-testing:
+>>>>>>> e028b32ed414173d07a2bed2ac2c171f90206c54
     image: locustio/locust
     container_name: locust-traffic-testing
     ports:
