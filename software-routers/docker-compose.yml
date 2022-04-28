@@ -211,6 +211,15 @@ services:
       - ./locust/:/mnt/locust
     command: -f /mnt/locust/locustfile.py
 
+  ubuntu-hs:
+    image: ubuntu:bionic
+    container_name: debug-traffic-testing
+    networks:
+      net-frr-r01:
+        ipv4_address: 10.225.0.101
+    command: sleep 99999999999999
+
+
 # For troubleshoting
 
   # wireshark:
