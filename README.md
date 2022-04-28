@@ -123,7 +123,7 @@ Once on the VTY Shell, the router can be managed or configured using [Terminal M
 
 ## Testing
 
-Locust is being used to test the solution end-to-end.
+[Locust](https://locust.io/) is being used to test the solution end-to-end. A Locust container is connected to FRR-R04 and an Nginx web site is connected to FRR-R01. Locust generates HTTP requests to simulate network traffic.
 
 ![Locust Testing](./software-routers/gifs/locust-demo.gif)
 
