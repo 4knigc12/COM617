@@ -38,7 +38,7 @@
 
 - name: Provision OpenNMS - Import requisition for OpenNMS Stack
   uri:
-    url: "http://localhost:{{ opennms_port }}/opennms/rest/requisitions/opennms-stack/import"
+    url: "http://localhost:{{ opennms_port }}/opennms/rest/requisitions/soft-routers/import"
     user: "{{ opennms_username }}"
     password: "{{ opennms_password }}"
     method: PUT
