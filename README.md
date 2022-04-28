@@ -121,6 +121,12 @@ From the host VM, issue the following command to connect to the router shell. Re
 
 Once on the VTY Shell, the router can be managed or configured using [Terminal Mode Commands](https://docs.frrouting.org/en/latest/basic.html#terminal-mode-commands)
 
+## Testing
+
+Locust is being used to test the solution end-to-end.
+
+![Locust Testing](./software-routers/gifs/locust-demo.gif)
+
 ## Further Reading
 
 To learn more about OpenNMS Horizon [go to the complete documentation](https://docs.opennms.com/start-page/1.0.0/index.html)
