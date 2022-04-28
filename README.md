@@ -115,15 +115,15 @@ Logging on to OpenNMS, viewing alerts and topology:
 
 ### Conecting to FRR Routers
 
-From the host VM, issue the following command to connect to the router shell. Replace frr-r0x with the router number
+From the host VM, issue the following command to connect to the router shell. Replace **frr-r01** with the hostname of the router:
 
-    sudo docker exec -u frr -it frr-r0x vtysh
+    sudo docker exec -u frr -it frr-r01 vtysh
 
 Once on the VTY Shell, the router can be managed or configured using [Terminal Mode Commands](https://docs.frrouting.org/en/latest/basic.html#terminal-mode-commands)
 
 ## Testing
 
-[Locust](https://locust.io/) is being used to test the solution end-to-end. A Locust container is connected to FRR-R04 and an Nginx web site is connected to FRR-R01. Locust generates HTTP requests to simulate network traffic.
+[Locust](https://locust.io/) is being used to test the solution end-to-end. A Locust container is connected to FRR-R01 and an Nginx web site is connected to FRR-R04. Locust generates HTTP requests to simulate network traffic.
 
 ![Locust Testing](./software-routers/gifs/locust-demo.gif)
 
