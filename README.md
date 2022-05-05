@@ -1,5 +1,6 @@
 # OpenNMS Horizon BPG  monitoring
 
+
 ## Background
 
 This project shows how OpenNMS can be configured to monitor BGP in a simulated "Internet Exchange”. It deploys a containerised instance of OpenNMS deployed against a small scale BPG network using FRRouting software routers.
@@ -61,6 +62,10 @@ RAM: 6GB
 
 HDD: 50GB
 
+Git
+
+Ansible version 2.10+
+
 > **Note:**
 It can take 5-10 mins to fully provision the environment if resouces are low
 
@@ -83,9 +88,9 @@ A comprehensive cheat sheet can be found here: [wpscholar/vagrant-cheat-sheet.md
 
 ## Installation - Option 2 - Ansible
 
-If you already have a suitable Ubutu Linux host machine that meets or exceeds the minimum specifications above, you can use the Ansible playbook to provision the environment. The playbook installs Docker, Docker Compose and other required components and then provisions OpenNMS Horizon and the FRRouting software routers into containers. Ansible version 2.10+ is required.
+If you already have a suitable Ubutu Linux host machine that meets or exceeds the minimum specifications above, you can use the Ansible playbook to provision the environment. The playbook installs Docker, Docker Compose and other required components and then provisions OpenNMS Horizon and the FRRouting software routers into containers.
 
-- Install [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+- Install [Ansible 2.10+](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
       sudo apt install ansible
       ansible --version
