@@ -56,15 +56,15 @@ These networks are used to interconnect the routers.
 
 The minimum requirements for free resource on the host:
 
-vCPU: 2
+- vCPU: 2
+- RAM: 6GB
+- HDD: 50GB
 
-RAM: 6GB
+Installed programs:
 
-HDD: 50GB
-
-Git
-
-Ansible version 2.10+
+- Git
+- Vagrant (For Option 1)
+- Ansible version 2.10+ (For Option 2)
 
 > **Note:**
 It can take 5-10 mins to fully provision the environment if resouces are low
