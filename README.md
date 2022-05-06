@@ -75,7 +75,7 @@ Vagrant can be used to build and provision an Ubuntu virtual machine on Oracle V
 
 - Install [Vagrant](https://www.vagrantup.com/)
 - Install [Oracle Virtual Box](https://www.virtualbox.org/)
-- Clone this repo to a Windows PC
+- Clone this repo to a Windows or Linux PC
 - Run `vagrant up` in this directory
 
 ### Vagrant Usage
